@@ -1,0 +1,84 @@
+event-card {
+  @import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700');
+
+ion-card {
+  position: relative;
+  text-align: center;
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+.card-title {
+  padding: 0 5px 0 10px;
+  font-size: 1.3em;
+  font-weight: 700;
+  color: black;
+}
+
+ion-avatar,
+ion-avatar > img{
+    border-radius:50%;
+    height:2rem;
+    width:2rem;
+    display: inline;
+    float: left;
+    margin-right: -9px;
+}
+.members{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding: 5px 5px 5px 10px;
+}
+
+.date{
+  text-align: left;
+  padding-left: 10px;
+  font-size: 0.8em;
+}
+.button-going{
+  text-align: left;
+  size: 4vw;
+  max-height: 7vw;
+}
+.button-ignore{
+  text-align: left;
+  size: 4vw;
+  max-height: 7vw;
+}
+.button-going-ignore{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin: 0 0 5px 10px;
+}
+.going{
+  align-self: center;
+  padding-left: 10px;
+}
+.card-subtitle {
+  font-size: 1.0em;
+  color: black;
+}
+.card-date{
+  font-size: 2.0em;
+  font-weight: 700;
+  position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  color: white;
+}
+
+.left{
+  position: relative;
+  text-align: center;
+}
+.container{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.logo {
+  width: 25vw;
+  height: 25vw;
+}
+}

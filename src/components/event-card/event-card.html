@@ -1,0 +1,29 @@
+<ion-card>
+  <div class="container">
+    <div class="left" type="button" (click)="details()">
+      <img class="logo" src="{{event.image}}">
+      <div class="card-date" type="button">{{event.dateTime | amParse:'DD-MM-YYYY HH:mm:ss' | amDateFormat:'DD'}}
+        <br> {{event.dateTime | amParse:'DD-MM-YYYY HH:mm:ss' | amDateFormat:'MMM'}}
+      </div>
+    </div>
+    <div class="right">
+      <ion-card-header type="button" (click)="details()" class="card-title">{{event.title}}</ion-card-header>
+      <div class="date" type="button" (click)="details()">{{event.dateTime | amParse:'DD-MM-YYYY HH:mm:ss' | amCalendar:referenceTime:formats}}</div>
+      <div class="members" type="button" (click)="details()">
+        <ion-avatar item-start *ngFor="let item of event.members| slice:0:3; let i = index;">
+          <img class="member" src="{{item.photo}}" />
+        </ion-avatar>
+        <div class="going" *ngIf="event.members?.length > 3">
+          + {{event.members ? event.members.length - 3: ''}} others
+        </div>
+      </div>
+      <div class="button-going-ignore">
+        <button class="button-going" ion-button color="light" (click)="event.status == 'going' ? event.status = 'none' : event.status = 'going'"
+          [style.display]="(event.status == 'going' || event.status == 'none') ? 'block' : 'none' " [style.background-color]="(event.status == 'going') ? '#ffc100' : '#f4f4f4' ">
+        Going</button>
+        <button class="button-ignore" ion-button color="light" (click)="event.status == 'ignore' ? event.status = 'none' : event.status = 'ignore'"
+          [style.display]="(event.status == 'ignore' || event.status == 'none') ? 'block' : 'none' " [style.background-color]="(event.status == 'ignore') ? '#ff3300' : '#f4f4f4' ">Ignore</button>
+      </div>
+    </div>
+  </div>
+</ion-card>

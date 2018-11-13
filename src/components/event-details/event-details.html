@@ -1,0 +1,27 @@
+<ion-content>
+    <div class="left">
+  <img class="logo" src="{{event.image}}">
+  <button class="status"ion-button icon-start clear (click)="back()"><ion-icon name="ios-arrow-back-outline"></ion-icon> </button>
+</div>
+  <div class="details-container">
+    <div class="title">{{event.title}}</div>
+    <div class="time-block">
+      <ion-icon name="ios-timer-outline" class="icon"></ion-icon>
+      <div class="card-date">{{eventDate.calendar() }}</div>
+    </div>
+    <div class="time-block">
+      <ion-icon ios="ios-speedometer" md="md-speedometer" class="icon"></ion-icon>
+      <span> {{event.members ? event.members.length: ''}} going</span>
+      <br>
+    </div>
+    <div class="members">
+      <ion-avatar item-start *ngFor="let item of event.members| slice:0:5; let i = index;">
+        <img class="member" src="{{item.photo}}" />
+      </ion-avatar>
+      <div class="going" *ngIf="event.members?.length > 5">
+        + {{event.members ? event.members.length - 5: ''}} others
+      </div>
+    </div>
+    <div class="card-subtitle">{{event.description}}</div>
+  </div>
+</ion-content>

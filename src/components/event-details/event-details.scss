@@ -1,0 +1,57 @@
+event-details {
+
+  .icon{
+    padding: 0 5px 0 5px;
+  }
+  .details-container{
+     padding-left: 20px;
+  }
+  .title{
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 2.0em;
+    font-weight: 700;
+    padding-bottom: 20px;
+  }
+  .time-block{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding-bottom: 20px;
+  }
+  .members{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 10px 5px 5px 10px;
+  }
+  .card-subtitle{
+    padding-top: 20px;
+}
+  ion-avatar,
+ion-avatar > img{
+    border-radius:50%;
+    height:3rem;
+    width:3rem;
+    display: inline;
+    float: left;
+    margin-right: -9px;
+}
+.going{
+  align-self: center;
+  padding-left: 10px;
+}
+
+.status{
+  font-size: 2.0em;
+  font-weight: 700;
+  position: absolute;
+  top: 8px;
+  left: -1vw;
+  color: white;
+}
+
+.left{
+  position: relative;
+  text-align: center;
+}
+}
